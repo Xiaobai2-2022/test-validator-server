@@ -85,8 +85,8 @@ public class CourseController {
     @Operation(summary = "Query 10 courses")
     @PermittedUsers({ADMIN, TEACHER, ASSISTANT, STUDENT})
     public ApiResponse<?> page(
-            @RequestParam Integer page,
-            @RequestParam Integer size,
+            @RequestParam("page") Integer page,
+            @RequestParam("size") Integer size,
             @RequestAttribute("userType") Integer userType,
             @RequestAttribute("userId") String userId
     ) {
