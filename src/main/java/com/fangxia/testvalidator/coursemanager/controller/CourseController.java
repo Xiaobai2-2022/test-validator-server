@@ -71,7 +71,6 @@ public class CourseController {
         CourseEO course = EntityUtil.dtoToEo(courseDTO);
         course.setId(UUID.randomUUID().toString());
         course.setCourseOwner(owner.getId());
-        course.setIsActive(true);
         course.setCourseJoinCode(joinCode);
         course.setCreatedTime(LocalDateTime.now());
         course.setUpdatedTime(LocalDateTime.now());

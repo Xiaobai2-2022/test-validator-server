@@ -114,12 +114,12 @@ public class UserAuthController {
 
     @PostMapping("/logout")
     public ApiResponse<?> logout(HttpServletResponse response) {
-        ResponseCookie deleteCookie = ResponseCookie.from("refresh_token", "")
+        ResponseCookie deleteCookie = ResponseCookie.from("refreshToken", "")
             .path("/")
             .maxAge(0)
             .httpOnly(true)
-            .secure(true)
-            .sameSite("Strict")
+            .secure(false)
+            .sameSite("Lax")
             .build();
 
         response.addHeader(HttpHeaders.SET_COOKIE, deleteCookie.toString());

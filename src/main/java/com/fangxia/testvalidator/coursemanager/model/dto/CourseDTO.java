@@ -19,4 +19,7 @@ public class CourseDTO {
     @Schema(description = "Is the course open")
     private Boolean isOpen;
 
+    @Schema(description = "Is the course active")
+    private Boolean isActive;
+
 }

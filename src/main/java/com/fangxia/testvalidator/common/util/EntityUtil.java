@@ -43,6 +43,7 @@ public class EntityUtil {
         courseEO.setCourseName(courseDTO.getCourseName());
         courseEO.setCourseDescription(courseDTO.getCourseDescription());
         courseEO.setIsOpen(courseDTO.getIsOpen());
+        courseEO.setIsActive(courseDTO.getIsActive());
         return courseEO;
     }
 
