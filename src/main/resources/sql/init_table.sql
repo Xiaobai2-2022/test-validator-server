@@ -46,3 +46,13 @@ CREATE TABLE fx_course_users (
 
     PRIMARY KEY (user_id, course_id)
 );
+
+CREATE TABLE fx_course_invitations (
+    user_id CHAR(36),
+    course_id CHAR(36),
+
+    created_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    PRIMARY KEY (user_id, course_id)
+)
